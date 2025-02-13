@@ -2,6 +2,8 @@
 
 [https://reactrouter.com/6.29.0/upgrading/v5#remove-redirects-inside-switch](https://reactrouter.com/6.29.0/upgrading/v5#remove-redirects-inside-switch)
 
+[https://docs.strapi.io/dev-docs/migration/v4-to-v5/additional-resources/helper-plugin](https://docs.strapi.io/dev-docs/migration/v4-to-v5/additional-resources/helper-plugin)
+
 
 ✘ [ERROR] No matching export in "node_modules/react-router-dom/dist/index.mjs" for import "Redirect"
 
