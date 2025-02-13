@@ -1,3 +1,47 @@
+# TO FIX
+
+[https://reactrouter.com/6.29.0/upgrading/v5#remove-redirects-inside-switch](https://reactrouter.com/6.29.0/upgrading/v5#remove-redirects-inside-switch)
+
+
+✘ [ERROR] No matching export in "node_modules/react-router-dom/dist/index.mjs" for import "Redirect"
+
+    node_modules/telegram-bot-strapi/node_modules/@strapi/helper-plugin/dist/index.mjs:6:9:
+      6 │ import { Redirect, useLocation, useHistory, NavLink } from "react-router-dom";
+        │          ~~~~~~~~
+        ╵          redirect
+
+  Did you mean to import "redirect" instead?
+
+    node_modules/react-router/dist/development/index.mjs:199:2:
+      199 │   redirect,
+          ╵   ~~~~~~~~
+
+✘ [ERROR] No matching export in "node_modules/react-router-dom/dist/index.mjs" for import "useHistory"
+
+    node_modules/telegram-bot-strapi/node_modules/@strapi/helper-plugin/dist/index.mjs:6:32:
+      6 │ import { Redirect, useLocation, useHistory, NavLink } from "react-router-dom";
+        ╵                                 ~~~~~~~~~~
+
+✘ [ERROR] No matching export in "node_modules/react-router-dom/dist/index.mjs" for import "Switch"
+
+    node_modules/telegram-bot-strapi/admin/src/pages/App/index.tsx:9:9:
+      9 │ import { Switch, Route } from 'react-router-dom';
+        ╵          ~~~~~~
+
+2:12:54 AM [vite] error while updating dependencies:
+Error: Build failed with 3 errors:
+node_modules/telegram-bot-strapi/admin/src/pages/App/index.tsx:9:9: ERROR: No matching export in "node_modules/react-router-dom/dist/index.mjs" for import "Switch"
+node_modules/telegram-bot-strapi/node_modules/@strapi/helper-plugin/dist/index.mjs:6:9: ERROR: No matching export in "node_modules/react-router-dom/dist/index.mjs" for import "Redirect"
+node_modules/telegram-bot-strapi/node_modules/@strapi/helper-plugin/dist/index.mjs:6:32: ERROR: No matching export in "node_modules/react-router-dom/dist/index.mjs" for import "useHistory"
+    at failureErrorWithLog (/home/debian/BACKEND_n/node_modules/esbuild/lib/main.js:1651:15)
+    at /home/debian/BACKEND_n/node_modules/esbuild/lib/main.js:1059:25
+    at /home/debian/BACKEND_n/node_modules/esbuild/lib/main.js:1527:9
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+
+
+
+
 # Strapi v4 plugin: Telegram bot
 
 Plugin Strapi for sending messages to a Telegram bot.
@@ -94,3 +138,6 @@ All done. Enjoy 🎉
 - [Strapi](https://strapi.io)
 - [Create Telegram bot](https://flowxo.com/how-to-create-a-bot-for-telegram-short-and-simple-guide-for-beginners/)
 - [Create Telegram bot (Video)](https://youtu.be/XoryoE9V88E)
+
+
+
