@@ -1,30 +1,25 @@
-import { request } from "@strapi/helper-plugin";
+import { useFetchClient } from '@strapi/strapi/admin';
 import type { IChat, IInformationAboutMe } from "../../../types/bot.types";
+
+const { get, del, put } = useFetchClient();
 
 const botRequest = {
   getMe: async (): Promise<IInformationAboutMe> => {
-    return await request("/telegram-bot-strapi/me", {
-      method: "GET",
-    });
+    return await get("/telegram-bot-strapi/me");
   },
 
   geChats: async (): Promise<IChat[]> => {
-    return await request("/telegram-bot-strapi/find", {
-      method: "GET",
-    });
+    return await get("/telegram-bot-strapi/find");
   },
 
   deleteChat: async (chat: IChat): Promise<IChat> => {
-    const result = await request(`/telegram-bot-strapi/delete/${chat.id}`, {
-      method: "DELETE",
-    });
+    const result = await del(`/telegram-bot-strapi/delete/${chat.id}`);
 
     return result;
   },
 
   updateChat: async (id: number, chat: IChat): Promise<IChat> => {
-    const result = await request(`/telegram-bot-strapi/update/${id}`, {
-      method: "PUT",
+    const result = await put(`/telegram-bot-strapi/update/${id}`, {
       body: chat,
     });
 

@@ -15,7 +15,7 @@ import {
   Alert,
 } from "@strapi/design-system";
 
-import { LoadingIndicatorPage } from "@strapi/helper-plugin";
+import { Page } from "@strapi/strapi/admin";
 import { Refresh, ArrowLeft } from "@strapi/icons";
 import { RiErrorWarningFill } from "react-icons/ri";
 
@@ -88,7 +88,7 @@ const HomePage: FC = () => {
     await fetchData();
   };
 
-  if (isLoading) return <LoadingIndicatorPage />;
+  if (isLoading) return <Page.Loading />;
 
   return (
     <Layout>
