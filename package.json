@@ -1,6 +1,6 @@
 {
   "name": "telegram-bot-strapi",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "access": "public",
   "description": "Telegram bot for sending messages.",
   "strapi": {
@@ -23,9 +23,8 @@
   "devDependencies": {
     "@strapi/typescript-utils": "^4.6.0",
     "@types/node-telegram-bot-api": "^0.61.7",
-    "@types/react": "^17.0.53",
+    "@types/react": "^18.0.53",
     "@types/react-dom": "^18.0.28",
-    "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.26",
     "@types/uuid": "^9.0.2",
     "react": "^18.2.0",
@@ -35,8 +34,8 @@
     "typescript": "5.0.4"
   },
   "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0",
+    "react": "^18.0.0",
+    "react-dom": " ^18.0.0",
     "react-router-dom": "^6.29.0",
     "styled-components": "^5.3.6",
     "@strapi/strapi": "^5.0.0"
