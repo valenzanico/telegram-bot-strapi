@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Page } from '@strapi/strapi/admin';
 import pluginId from '../../pluginId';
 import HomePage from '../HomePage';
@@ -14,10 +14,10 @@ import HomePage from '../HomePage';
 const App = () => {
   return (
     <div>
-      <Switch>
-        <Route path={`/plugins/${pluginId}`} component={HomePage} exact />
-        <Route component={Page.Error} />
-      </Switch>
+      <Routes>
+        <Route path={`/plugins/${pluginId}`} element={<HomePage />} />
+        <Route path="*" element={<Page.Error />} />
+      </Routes>
     </div>
   );
 };
