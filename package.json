@@ -1,6 +1,6 @@
 {
   "name": "telegram-bot-strapi",
-  "version": "1.2.0b",
+  "version": "1.2.0",
   "access": "public",
   "description": "Telegram bot for sending messages.",
   "strapi": {
